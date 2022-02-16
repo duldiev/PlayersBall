@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +11,103 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PlayersBall" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zxn-It-FcL">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UJU-Si-0vz" userLabel="CoverView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="476.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="6og-ov-xOO">
+                                                <rect key="frame" x="37.5" y="43.5" width="300" height="389.5"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cover" translatesAutoresizingMaskIntoConstraints="NO" id="iec-ht-jvt">
+                                                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="300" id="Ga8-FQ-t4m"/>
+                                                            <constraint firstAttribute="height" constant="300" id="jky-xD-qOj"/>
+                                                        </constraints>
+                                                        <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                    </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player's Ball" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Uf-mq-wWd">
+                                                        <rect key="frame" x="82.5" y="358" width="135" height="31.5"/>
+                                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="26"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="6og-ov-xOO" firstAttribute="centerX" secondItem="UJU-Si-0vz" secondAttribute="centerX" id="ZSQ-uE-NSt"/>
+                                            <constraint firstItem="6og-ov-xOO" firstAttribute="centerY" secondItem="UJU-Si-0vz" secondAttribute="centerY" id="ug4-Qm-hJB"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PIt-wi-8iP">
+                                        <rect key="frame" x="0.0" y="476.5" width="375" height="190.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tli-GN-BTG">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="127"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8p-LO-66V">
+                                                        <rect key="frame" x="127.5" y="38.5" width="120" height="50"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="width" constant="120" id="BGL-WP-vdV"/>
+                                                            <constraint firstAttribute="height" constant="50" id="f4J-3j-XMl"/>
+                                                        </constraints>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="Play">
+                                                            <fontDescription key="titleFontDescription" name="Helvetica" family="Helvetica" pointSize="20"/>
+                                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="playButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sqY-MX-FWu"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="g8p-LO-66V" firstAttribute="centerX" secondItem="tli-GN-BTG" secondAttribute="centerX" id="C8w-Ip-nBy"/>
+                                                    <constraint firstItem="g8p-LO-66V" firstAttribute="centerY" secondItem="tli-GN-BTG" secondAttribute="centerY" id="ewz-WA-MjD"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zhm-E2-bVE" userLabel="StepperView">
+                                                <rect key="frame" x="0.0" y="127" width="375" height="63.5"/>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="tli-GN-BTG" firstAttribute="height" secondItem="zhm-E2-bVE" secondAttribute="height" multiplier="2.00676" id="MzZ-l7-f3g"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="UJU-Si-0vz" firstAttribute="height" secondItem="PIt-wi-8iP" secondAttribute="height" multiplier="2.5" id="8id-BI-gri"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.17799613402061853" green="0.061489389788429313" blue="0.059310104377642094" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zxn-It-FcL" secondAttribute="bottom" id="NyM-Uk-Hyd"/>
+                            <constraint firstItem="zxn-It-FcL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WxA-mt-vz3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zxn-It-FcL" secondAttribute="trailing" id="mRi-1W-uxC"/>
+                            <constraint firstItem="zxn-It-FcL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wCR-GN-vdd"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="coverImage" destination="iec-ht-jvt" id="BEw-hc-wrf"/>
+                        <outlet property="playButton" destination="g8p-LO-66V" id="FxI-YD-SZO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="128.80000000000001" y="81.409295352323838"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cover" width="200" height="200"/>
+    </resources>
 </document>
